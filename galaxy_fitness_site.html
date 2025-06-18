@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Galaxy Fitness Gym</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header, footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .btn:hover {
+      background-color: #218838;
+    }
+    .language-selector {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    select {
+      padding: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="language-selector">
+  <label for="language">Language:</label>
+  <select id="language" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="hi">हिंदी</option>
+  </select>
+</div>
+
+<header>
+  <h1 id="title">The Galaxy Fitness Gym</h1>
+  <nav>
+    <a href="#home" id="navHome">Home</a>
+    <a href="#about" id="navAbout">About Us</a>
+    <a href="#services" id="navServices">Services</a>
+    <a href="#tips" id="navTips">Free Gym Tips</a>
+    <a href="#contact" id="navContact">Contact</a>
+  </nav>
+</header>
+
+<section id="home">
+  <h2 id="homeTitle">Welcome to The Galaxy Fitness Gym</h2>
+  <p id="homeDesc">Your Fitness is Our Responsibility. Start your fitness journey with personal training and free fitness tips.</p>
+  <a href="#contact" class="btn" id="joinBtn">Join Now</a>
+</section>
+
+<section id="about">
+  <h2 id="aboutTitle">About Us</h2>
+  <p id="aboutDesc">The Galaxy Fitness Gym में आपका स्वागत है। मैं राहुल, आपको व्यक्तिगत वर्कआउट प्लान, वजन कम/बढ़ाने का मार्गदर्शन, और मुफ्त जिम टिप्स प्रदान करता हूँ। हमारी जिम में आपको एक मित्रवत माहौल और व्यक्तिगत ध्यान मिलता है।</p>
+</section>
+
+<section id="services">
+  <h2 id="servicesTitle">Our Services</h2>
+  <ul id="servicesList">
+    <li>Personal Gym Training</li>
+    <li>Weight Loss & Muscle Gain Programs</li>
+    <li>Free Daily Gym Tips</li>
+  </ul>
+</section>
+
+<section id="tips">
+  <h2 id="tipsTitle">Free Gym Tips</h2>
+  <ul id="tipsList">
+    <li>Proper warm-up is very important.</li>
+    <li>Always include protein in your diet.</li>
+    <li>Maintain correct posture while lifting heavy weights.</li>
+    <li>Breathing control is essential during workouts.</li>
+  </ul>
+  <p id="tipsContact">For daily gym tips, WhatsApp us: <a href="https://wa.me/919799586194" target="_blank">Chat with Rahul Sir</a></p>
+</section>
+
+<section id="contact">
+  <h2 id="contactTitle">Contact Us</h2>
+  <p>📞 Phone: <a href="tel:+919799586194">9799586194</a></p>
+  <p>📱 WhatsApp: <a href="https://wa.me/919799586194" target="_blank">Chat with Rahul Sir</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 The Galaxy Fitness Gym. All rights reserved.</p>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      title: "The Galaxy Fitness Gym",
+      navHome: "Home",
+      navAbout: "About Us",
+      navServices: "Services",
+      navTips: "Free Gym Tips",
+      navContact: "Contact",
+      homeTitle: "Welcome to The Galaxy Fitness Gym",
+      homeDesc: "Your Fitness is Our Responsibility. Start your fitness journey with personal training and free fitness tips.",
+      joinBtn: "Join Now",
+      aboutTitle: "About Us",
+      aboutDesc: "Welcome to The Galaxy Fitness Gym. I am Rahul, providing you with personal workout plans, weight loss/muscle gain guidance, and free gym tips. Our gym offers a friendly environment with personal attention.",
+      servicesTitle: "Our Services",
+      servicesList: ["Personal Gym Training", "Weight Loss & Muscle Gain Programs", "Free Daily Gym Tips"],
+      tipsTitle: "Free Gym Tips",
+      tipsList: ["Proper warm-up is very important.", "Always include protein in your diet.", "Maintain correct posture while lifting heavy weights.", "Breathing control is essential during workouts."],
+      tipsContact: "For daily gym tips, WhatsApp us:"
+    },
+    hi: {
+      title: "The Galaxy Fitness Gym",
+      navHome: "होम",
+      navAbout: "हमारे बारे में",
+      navServices: "सेवाएँ",
+      navTips: "मुफ्त जिम टिप्स",
+      navContact: "संपर्क करें",
+      homeTitle: "The Galaxy Fitness Gym में आपका स्वागत है",
+      homeDesc: "आपकी फिटनेस हमारी जिम्मेदारी है। व्यक्तिगत प्रशिक्षण और मुफ्त फिटनेस टिप्स के साथ अपनी फिटनेस यात्रा शुरू करें।",
+      joinBtn: "अभी जुड़ें",
+      aboutTitle: "हमारे बारे में",
+      aboutDesc: "The Galaxy Fitness Gym में आपका स्वागत है। मैं राहुल, आपको व्यक्तिगत वर्कआउट प्लान, वजन कम/बढ़ाने का मार्गदर्शन, और मुफ्त जिम टिप्स प्रदान करता हूँ। हमारी जिम में आपको एक मित्रवत माहौल और व्यक्तिगत ध्यान मिलता है।",
+      servicesTitle: "हमारी सेवाएँ",
+      servicesList: ["व्यक्तिगत जिम प्रशिक्षण", "वजन घटाने और मांसपेशियां बढ़ाने के कार्यक्रम", "मुफ्त दैनिक जिम टिप्स"],
+      tipsTitle: "मुफ्त जिम टिप्स",
+      tipsList: ["सही वार्म-अप करना बहुत जरूरी है।", "अपने आहार में हमेशा प्रोटीन शामिल करें।", "भारी वजन उठाते समय सही मुद्रा बनाए रखें।", "व्यायाम करते समय श्वास नियंत्रण आवश्यक है।"],
+      tipsContact: "दैनिक जिम टिप्स के लिए व्हाट्सएप करें:"
+    }
+  };
+
+  function changeLanguage() {
+    const lang = document.getElementById('language').value;
+    const t = translations[lang];
+
+    document.getElementById('title').innerText = t.title;
+    document.getElementById('navHome').innerText = t.navHome;
+    document.getElementById('navAbout').innerText = t.navAbout;
+    document.getElementById('navServices').innerText = t.navServices;
+    document.getElementById('navTips').innerText = t.navTips;
+    document.getElementById('navContact').innerText = t.navContact;
+    document.getElementById('homeTitle').innerText = t.homeTitle;
+    document.getElementById('homeDesc').innerText = t.homeDesc;
+    document.getElementById('joinBtn').innerText = t.joinBtn;
+    document.getElementById('aboutTitle').innerText = t.aboutTitle;
+    document.getElementById('aboutDesc').innerText = t.aboutDesc;
+    document.getElementById('servicesTitle').innerText = t.servicesTitle;
+    const servicesItems = document.getElementById('servicesList').getElementsByTagName('li');
+    t.servicesList.forEach((item, index) => {
+      servicesItems[index].innerText = item;
+    });
+    document.getElementById('tipsTitle').innerText = t.tipsTitle;
+    const tipsItems = document.getElementById('tipsList').getElementsByTagName('li');
+    t.tipsList.forEach((item, index) => {
+      tipsItems[index].innerText = item;
+    });
+    document.getElementById('tipsContact').childNodes[0].nodeValue = t.tipsContact + ' ';
+  }
+</script>
+
+</body>
+</html>
